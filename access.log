@@ -1,2 +1,4 @@
 ::1 - - [03/Mar/2023:11:08:17 +0000] "GET /posts HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"
 ::1 - - [03/Mar/2023:11:08:33 +0000] "DELETE /post/6401c78f200df741bd146d76 HTTP/1.1" 200 27 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"
+::1 - - [03/Mar/2023:12:33:21 +0000] "GET /test HTTP/1.1" 200 35 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"
+::1 - - [03/Mar/2023:12:33:27 +0000] "GET /posts HTTP/1.1" 200 241 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"
