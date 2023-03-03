@@ -36,8 +36,7 @@ const fileFilter = (req, file, cb) => {
   }
 };
 
-const MONGODB_URI =
-  `mongodb+srv://${process.env.MONGO_NAME}:${process.env.MONGO_PASSWORD}@cluster0.o5luvip.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}?retryWrites=true&w=majority`;
+const MONGODB_URI = `mongodb+srv://${process.env.MONGO_NAME}:${process.env.MONGO_PASSWORD}@cluster0.o5luvip.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}?retryWrites=true&w=majority`;
 
 const store = new MongoDBStore({
   uri: MONGODB_URI,
@@ -93,6 +92,9 @@ app.use((req, res, next) => {
     });
 });
 
+app.use("/test", (req, res, next) => {
+  return res.send({ message: "Successfully Get API!" });
+});
 app.use(authRoutes);
 app.use(postRoutes);
 
