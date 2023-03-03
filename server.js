@@ -37,7 +37,7 @@ const fileFilter = (req, file, cb) => {
 };
 
 const MONGODB_URI =
-  "mongodb+srv://owwibookstore:owwibookstore@cluster0.o5luvip.mongodb.net/SocialNetwork?retryWrites=true&w=majority";
+  `mongodb+srv://${process.env.MONGO_NAME}:${process.env.MONGO_PASSWORD}@cluster0.o5luvip.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}?retryWrites=true&w=majority`;
 
 const store = new MongoDBStore({
   uri: MONGODB_URI,
@@ -99,7 +99,7 @@ app.use(postRoutes);
 mongoose
   .connect(MONGODB_URI)
   .then((result) => {
-    const server = app.listen(5000);
+    const server = app.listen(process.env.PORT || 5000);
     const io = require("./socket").init(server);
     io.on("connection", (socket) => {
       console.log("Client Connected!.");
